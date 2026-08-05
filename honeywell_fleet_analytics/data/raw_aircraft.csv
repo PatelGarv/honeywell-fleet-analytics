@@ -1,0 +1,51 @@
+aircraft_id,model,operator,install_date,total_flight_hours,maintenance_protocol,base_location
+AC-000,A320neo,Southwest,2019-12-12,39513,predictive_v2,Lake Joshuabury
+AC-001,B737-800,Delta,2020-03-09,7188,predictive_v2,Lake Joyside
+AC-002,A320neo,United,2019-09-28,32638,predictive_v2,Johnsonland
+AC-003,A350-900,FedEx,2020-11-10,44206,predictive_v2,New Carolyn
+AC-004,B787-9,Delta,2020-09-09,5986,predictive_v2,Robinsonshire
+AC-005,A320neo,Atlas Air,2021-05-14,6544,predictive_v2,Port Lindachester
+AC-006,A350-900,FedEx,2021-11-23,16972,standard,Ericmouth
+AC-007,B737-800,Southwest,2019-11-14,15051,predictive_v2,South Colinstad
+AC-008,B777-300,FedEx,2021-04-01,15652,standard,Lake Stephenville
+AC-009,B787-9,Delta,2022-03-22,13379,standard,New Kellystad
+AC-010,B737-800,Delta,2020-08-20,18276,predictive_v2,North Donnaport
+AC-011,A350-900,Atlas Air,2019-09-05,17159,predictive_v2,Port Craig
+AC-012,B737-800,Southwest,2021-05-13,44555,standard,Reidstad
+AC-013,B737-800,Atlas Air,2020-05-20,16624,standard,Michaelview
+AC-014,A350-900,FedEx,2019-08-10,19432,predictive_v2,New Jessica
+AC-015,A320neo,Delta,2020-05-22,23481,standard,Grayside
+AC-016,B787-9,FedEx,2020-11-13,32389,standard,Meganton
+AC-017,A350-900,Southwest,2020-12-12,39050,predictive_v2,Port Leslieview
+AC-018,A350-900,FedEx,2019-07-25,24748,standard,New Nancy
+AC-019,B737-800,FedEx,2021-09-04,25954,standard,Lake Victor
+AC-020,A350-900,Delta,2022-11-26,43549,standard,West Donald
+AC-021,B777-300,Southwest,2021-03-27,36390,predictive_v2,Hurstfurt
+AC-022,B777-300,FedEx,2022-01-29,43028,predictive_v2,East William
+AC-023,A350-900,Delta,2019-10-10,7756,standard,Port Danielburgh
+AC-024,B737-800,FedEx,2022-08-04,16670,standard,South Patrickmouth
+AC-025,A350-900,United,2021-02-20,16902,predictive_v2,Lake Jenniferside
+AC-026,B787-9,Delta,2021-04-08,38014,predictive_v2,Danielchester
+AC-027,B777-300,UPS,2020-05-06,34208,standard,Smithview
+AC-028,A320neo,American,2023-04-05,28384,standard,New Rita
+AC-029,B787-9,United,2021-07-16,28330,standard,East Nathaniel
+AC-030,A350-900,Delta,2020-05-16,44059,predictive_v2,New Mariotown
+AC-031,B777-300,Southwest,2019-12-14,38047,standard,Natashaport
+AC-032,B787-9,American,2021-01-13,6210,standard,East Natalieland
+AC-033,B737-800,Southwest,2019-09-24,41149,predictive_v2,Cabreraside
+AC-034,B737-800,United,2020-01-26,38776,predictive_v2,Lake Thomas
+AC-035,A320neo,UPS,2020-05-28,30766,predictive_v2,Allisonchester
+AC-036,A350-900,UPS,2020-10-20,5213,standard,Lake Larry
+AC-037,A350-900,American,2022-03-06,41472,predictive_v2,Lammouth
+AC-038,A320neo,United,2020-01-11,6110,standard,East Caleb
+AC-039,B737-800,UPS,2019-03-07,7606,standard,New Jeffrey
+AC-040,A320neo,Southwest,2019-08-09,6875,standard,East Carloston
+AC-041,A350-900,UPS,2021-10-23,34034,standard,New Johnfort
+AC-042,A320neo,Delta,2020-10-27,14803,predictive_v2,Lake Selena
+AC-043,A320neo,Delta,2023-01-08,39174,predictive_v2,Port Thomas
+AC-044,B737-800,UPS,2022-06-18,27399,predictive_v2,North Collin
+AC-045,B737-800,Southwest,2022-09-01,30592,standard,Rodneymouth
+AC-046,B737-800,Delta,2019-06-18,8435,predictive_v2,North Richardmouth
+AC-047,A320neo,American,2019-12-06,25770,predictive_v2,East James
+AC-048,A320neo,United,2022-10-25,30523,predictive_v2,South Isaiah
+AC-049,A320neo,Southwest,2022-12-08,20453,standard,Port Sandra

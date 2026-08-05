@@ -1,0 +1,13 @@
+version: 2
+
+sources:
+  - name: raw
+    database: honeywell_fleet
+    schema: raw
+    tables:
+      - name: telemetry
+        identifier: raw_telemetry
+      - name: aircraft
+        identifier: raw_aircraft
+      - name: components
+        identifier: raw_components

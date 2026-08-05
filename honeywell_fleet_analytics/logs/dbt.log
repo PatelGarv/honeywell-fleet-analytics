@@ -1,0 +1,54 @@
+==================== 2026-08-04T00:31:32.804491Z | 019fca2e-cd88-7f80-b907-af3e2ad8f636 ====================
+00:31:32.811038 [info ]: Installing dbt project and profile setup
+00:31:32.875148 [info ]: Info Created .vscode/extensions.json with dbt extension recommendation
+00:31:32.890930 [info ]: Success Project created successfully!
+00:31:32.892464 [info ]: Info Project name: honeywell_dbt
+00:31:32.893509 [info ]: Info Project directory: honeywell_dbt
+00:31:32.894988 [info ]: Info Setting up your profile...
+00:31:32.936574 [info ]: Loading ~/.dbt/profiles.yml
+00:31:33.065111 [info ]: Profile 'honeywell_dbt' already exists. You can choose how to proceed.
+00:32:04.034460 [info ]: Info Creating new profile...
+00:32:22.248414 [info ]: No dbt_cloud.yml found - proceeding without cloud pre-population
+==================== 2026-08-04T00:32:49.303446Z | 019fca2f-f893-7240-81d3-c5b6a653a820 ====================
+00:32:49.303724 [info ]: Installing dbt project and profile setup
+00:32:49.309362 [info ]: Warning Directory 'honeywell_dbt' already exists, using 'honeywell_dbt_1' instead
+00:32:49.352253 [info ]: Info Created .vscode/extensions.json with dbt extension recommendation
+00:32:49.368708 [info ]: Success Project created successfully!
+00:32:49.370415 [info ]: Info Project name: honeywell_dbt_1
+00:32:49.370846 [info ]: Info Project directory: honeywell_dbt_1
+00:32:49.371262 [info ]: Info Setting up your profile...
+00:32:49.372284 [info ]: Loading ~/.dbt/profiles.yml
+00:32:49.375917 [info ]: Info Creating new profile...
+00:32:50.623403 [info ]: No dbt_cloud.yml found - proceeding without cloud pre-population
+00:34:15.555688 [info ]: Success Profile written to C:\Users\garv\.dbt\profiles.yml
+00:34:15.558010 [info ]: Validating profile inputs, adapters, and connection
+
+00:34:15.558800 [info ]: dbt-core 2.0.0-alpha.5
+00:34:15.567915 [info ]: Started loading project
+00:34:15.639219 [info ]: Loading ~/.dbt/profiles.yml
+00:34:15.656421 [info ]: Finished loading project [  0.09s]
+00:34:15.665434 [info ]: Started debugging
+00:34:15.665729 [info ]: Debugging profile: dev
+00:34:15.666296 [info ]: Debugging dbt version: 2.0.0-alpha.5
+00:34:15.666766 [info ]: Debugging platform: windows x86_64 (windows)
+00:34:15.667919 [info ]: Debugging adapter type: snowflake (remote)
+00:34:15.707877 [info ]: Debugging dependencies:
+  git: OK
+00:34:15.721100 [info ]: Debugging connection:
+  "account": "TZB59532",
+  "user": "GARV101",
+  "database": "HONEYWELL_FLEET",
+  "warehouse": "HONEYWELL_WH",
+  "schema": "dbt_garv",
+  "role": "ACCOUNTADMIN"
+00:34:19.444228 [info ]: Finished debugging [  3.78s]
+00:34:19.444944 [error]: [AuthenticationFailed (dbt1011)]: dbt was unable to connect to the specified database.
+The following error was returned:
+
+[Snowflake] 390100 (08004): Incorrect username or password was specified. [99220ea0-ffe2-40df-8ae8-a5c2dc88a183]
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/core/connect-data-platform/connection-profiles
+00:34:19.544839 [info ]: 
+==================== Execution Summary =====================
+Finished 'init' with 1 error for target 'dev' [1m 30s]

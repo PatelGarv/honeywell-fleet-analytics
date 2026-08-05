@@ -1,0 +1,57 @@
+version: 2
+
+models:
+  - name: stg_telemetry
+    description: "Flattened sensor telemetry from raw JSON logs"
+    columns:
+      - name: reading_id
+        data_tests:
+          - unique
+          - not_null
+      - name: status
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['NORMAL', 'ADVISORY', 'WARNING', 'CRITICAL']
+      - name: alert_severity_score
+        data_tests:
+          - not_null
+
+  - name: stg_aircraft
+    description: "Aircraft registry master data"
+    columns:
+      - name: aircraft_id
+        data_tests:
+          - unique
+          - not_null
+
+  - name: stg_components
+    description: "Component master data"
+    columns:
+      - name: component_id
+        data_tests:
+          - unique
+          - not_null
+      - name: aircraft_id
+        data_tests:
+          - relationships:
+              arguments:
+                to: ref('stg_aircraft')
+                field: aircraft_id
+
+  - name: int_sensor_trends
+    description: "Sensor trends with window functions for degradation tracking"
+    columns:
+      - name: reading_id
+        data_tests:
+          - unique
+          - not_null
+
+  - name: mart_degradation_funnel
+    description: "Component degradation funnel analytics"
+
+  - name: mart_component_survival
+    description: "Component survival analysis data"
+
+  - name: mart_maintenance_experiment
+    description: "A/B test data for maintenance protocols"
