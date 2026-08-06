@@ -6,10 +6,10 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 # Load all dbt marts
-funnel = query_to_df("SELECT * FROM DBT_GARV.MART_DEGRADATION_FUNNEL")
-survival = query_to_df("SELECT * FROM DBT_GARV.MART_COMPONENT_SURVIVAL")
-experiment = query_to_df("SELECT * FROM DBT_GARV.MART_MAINTENANCE_EXPERIMENT")
-telemetry = query_to_df("SELECT * FROM DBT_GARV.INT_SENSOR_TRENDS")
+funnel = query_to_df("SELECT * FROM DBT_GARV_MARTS.MART_DEGRADATION_FUNNEL")
+survival = query_to_df("SELECT * FROM DBT_GARV_MARTS.MART_COMPONENT_SURVIVAL")
+experiment = query_to_df("SELECT * FROM DBT_GARV_MARTS.MART_MAINTENANCE_EXPERIMENT")
+telemetry = query_to_df("SELECT * FROM DBT_GARV_INTERMEDIATE.INT_SENSOR_TRENDS")
 
 print("Funnel:", funnel.shape)
 print("Survival:", survival.shape)
@@ -29,7 +29,7 @@ SELECT
     COUNT(DISTINCT CASE WHEN STATUS IN ('WARNING','CRITICAL') THEN AIRCRAFT_ID END) as aircraft_with_alerts,
     AVG(ALERT_SEVERITY_SCORE) as fleet_avg_severity,
     COUNT(DISTINCT COMPONENT_ID) as total_components_monitored
-FROM DBT_GARV.INT_SENSOR_TRENDS
+FROM DBT_GARV_INTERMEDIATE.INT_SENSOR_TRENDS
 GROUP BY 1
 ORDER BY 1
 """)
@@ -116,7 +116,7 @@ SELECT
     COUNT(DISTINCT CASE WHEN STATUS = 'CRITICAL' THEN READING_ID END) as unplanned_events,
     COUNT(DISTINCT CASE WHEN STATUS = 'WARNING' THEN READING_ID END) as warning_events,
     AVG(ALERT_SEVERITY_SCORE) as avg_severity
-FROM DBT_GARV.INT_SENSOR_TRENDS
+FROM DBT_GARV_INTERMEDIATE.INT_SENSOR_TRENDS
 WHERE DATE(READING_TIMESTAMP) BETWEEN '2024-01-01' AND '2024-12-31'
 GROUP BY 1
 """)
@@ -153,8 +153,8 @@ plt.show()
 # Section F: A/B Test Summary 
 
 ab_summary = experiment.copy()
-ab_summary['critical_rate'] = ab_summary['CRITICAL_FAILURES'] / ab_summary['TOTAL_COMPONENTS']
-ab_summary['warning_rate'] = ab_summary['WARNINGS'] / ab_summary['TOTAL_COMPONENTS']
+ab_summary['CRITICAL_RATE'] = ab_summary['CRITICAL_FAILURES'] / ab_summary['TOTAL_COMPONENTS']
+ab_summary['WARNING_RATE'] = ab_summary['WARNINGS'] / ab_summary['TOTAL_COMPONENTS']
 
 print("A/B Test: Standard vs Predictive_v2 Maintenance")
 print(ab_summary[['MAINTENANCE_PROTOCOL', 'COMPONENT_TYPE', 'CRITICAL_RATE', 
@@ -198,7 +198,7 @@ SELECT
     AVG(ALERT_SEVERITY_SCORE) as avg_severity,
     COUNT(CASE WHEN STATUS = 'CRITICAL' THEN 1 END) as critical_count,
     COUNT(CASE WHEN STATUS = 'WARNING' THEN 1 END) as warning_count
-FROM DBT_GARV.INT_SENSOR_TRENDS
+FROM DBT_GARV_INTERMEDIATE.INT_SENSOR_TRENDS
 GROUP BY 1, 2, 3, 4, 5, 6
 """)
 high_risk.to_csv('../data/export_high_risk_components.csv', index=False)

@@ -1,0 +1,11 @@
+MAINTENANCE_PROTOCOL,COMPONENT_TYPE,TOTAL_COMPONENTS,CRITICAL_FAILURES,WARNINGS,AVG_SEVERITY,AVG_COMPONENT_AGE_DAYS
+standard,fuel_sensor,20,20,20,29.224247,626.763273
+predictive_v2,hydraulic_pump,21,21,21,30.70434,813.796038
+standard,oil_pressure_valve,24,24,24,28.930458,754.400201
+predictive_v2,fuel_sensor,27,27,27,30.411397,791.136289
+predictive_v2,temperature_probe,15,15,15,32.876987,932.304665
+standard,temperature_probe,18,18,18,28.462266,619.210341
+standard,hydraulic_pump,19,19,19,31.077203,806.451454
+predictive_v2,oil_pressure_valve,21,21,21,28.058021,685.042459
+predictive_v2,vibration_sensor,14,14,14,30.212514,715.896194
+standard,vibration_sensor,21,21,21,30.476811,783.833269
